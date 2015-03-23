@@ -1,0 +1,133 @@
+package com.mohan.lzcc.model;
+
+import java.sql.Timestamp;
+/**
+ * 
+ * @author john王历飞
+ * @version 1.0
+ * @time 2014-03-07 09:41
+ *
+ */
+public class User {
+	private int id;//用户编号
+	private LoginInfo logininfo;//登陆用户
+	private UserLevel level;//用户级别
+	private String realName;//用户真实姓名
+	private String gender;//用户性别
+	private int age;//用户年龄
+	private Timestamp birthday;//用户生日
+	private String mailcode;//邮政编码
+	private String phone;//联系方式
+	private String email;//邮箱
+	private Timestamp registTime;//注册时间
+	private String question;//密保问题
+	private String answer;//密保答案
+	private String profession;//用户职业
+	private String unit;//用户单位
+	
+	public User(int age, String profession, String unit) {
+		super();
+		this.age = age;
+		this.profession = profession;
+		this.unit = unit;
+	}
+	public String getProfession() {
+		return profession;
+	}
+	public void setProfession(String profession) {
+		this.profession = profession;
+	}
+	public String getUnit() {
+		return unit;
+	}
+	public void setUnit(String unit) {
+		this.unit = unit;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public LoginInfo getLogininfo() {
+		return logininfo;
+	}
+	public void setLogininfo(LoginInfo logininfo) {
+		this.logininfo = logininfo;
+	}
+	public UserLevel getLevel() {
+		return level;
+	}
+	public void setLevel(UserLevel level) {
+		this.level = level;
+	}
+	public String getRealName() {
+		return realName;
+	}
+	public void setRealName(String realName) {
+		this.realName = realName;
+	}
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public Timestamp getBirthday() {
+		return birthday;
+	}
+	public void setBirthday(Timestamp birthday) {
+		this.birthday = birthday;
+	}
+	public String getMailcode() {
+		return mailcode;
+	}
+	public void setMailcode(String mailcode) {
+		this.mailcode = mailcode;
+	}
+	public String getPhone() {
+		return phone;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public Timestamp getRegistTime() {
+		return registTime;
+	}
+	public void setRegistTime(Timestamp registTime) {
+		this.registTime = registTime;
+	}
+	public String getQuestion() {
+		return question;
+	}
+	public void setQuestion(String question) {
+		this.question = question;
+	}
+	public String getAnswer() {
+		return answer;
+	}
+	public void setAnswer(String answer) {
+		this.answer = answer;
+	}
+	public User() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public User(LoginInfo logininfo) {
+		super();
+		this.logininfo = logininfo;
+	}
+	
+}

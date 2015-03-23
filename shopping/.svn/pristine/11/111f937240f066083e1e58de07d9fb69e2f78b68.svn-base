@@ -1,0 +1,15 @@
+.Container2{position:relative;width:100%;}
+.Container2 ul{list-style:none;margin:0;padding:0;}
+.Container2 .Container2_t{text-align:center;width:100%;height:30px;background:url('../Images/Container2.png') repeat-x 0 -65px;}
+.Container2 .Container2_t li{float:left;cursor:pointer;line-height:30px;width:130px;background:url('../Images/Container2.png') no-repeat left top;font-weight:normal;font-style:normal;text-decoration:none;color:#000000;font-family:Arial;font-size:16px;
+font-family:"微软雅黑";}
+.Container2 .Container2_t li.c_on{background-position:left -33px;font-weight:bold;color:#568C21;}
+.Container2 .Container2_c{text-align:left;height:100%;overflow:hidden;background:#FFFFFF;}
+.Container2 .Container2_c > ul {
+	width:760px;
+	height:30px;
+	margin-top:10px;
+}
+.Container2 .Container2_c + li{display:none;}
+.Container2 .Container2_c li.c_on{display:block;}
+.Container2 .Container2_c > ul > li{display:block;float:left;margin-left:20px;}

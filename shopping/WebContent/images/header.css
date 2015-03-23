@@ -1,0 +1,5 @@
+@charset "utf-8";
+/* logo search样式 */
+.search_button_normal{ width:81px; height:26px; border:none; background:url(bg1.gif) no-repeat 0px -200px;}
+.search_button_over{ width:81px; height:26px; border:none; background:url(bg1.gif) no-repeat -100px -200px;}
+.search_input_text{ width:404px; height:32px; line-height:32px; padding-left:5px; border:none; background:url(bg1.gif) no-repeat 0px -150px;}

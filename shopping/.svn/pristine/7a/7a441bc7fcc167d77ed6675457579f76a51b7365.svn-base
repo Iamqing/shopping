@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>墨涵书城</title>
+<link href="../images/confirmbank.css" rel="stylesheet" type="text/css" />
+<script src="../jQuery/jquery-1.7.1.js"></script>
+<script>
+	function showOrderDetail(){$("#orderdetail").show("blind");}
+	function closeOrderDetail(){$("#orderdetail").hide("blind");}
+</script>
+
+</head>
+
+<body>
+<div id="top_nav">
+  <div id="top_nav_left">
+	<ul>
+      <li><a href="#">收藏墨涵</a>&nbsp;|&nbsp;</li>
+      <li><a href="#">您好,cn126**1</a>&nbsp;|&nbsp;</li>
+      <li><a href="logout.html">[退出登录]</a>&nbsp;|&nbsp;</li>
+      <li><a href="../login.html">[请登录]</a>&nbsp;|&nbsp;</li>
+      <li><a href="personal.html">[个人设置]</a>&nbsp;|&nbsp;</li>
+      <li><a href="../register.html">[免费注册]</a></li>
+    </ul>
+  </div>
+  <div id="top_nav_right">
+  	<ul>
+    	<li><a href="#">墨涵客服</a></li>
+        <li><a href="#">购买流程</a>&nbsp;|&nbsp;</li>
+        <li><a href="myorder.html">我的订单</a>&nbsp;|&nbsp;</li>
+        <li><a href="../cart.html">购物车(0)</a>&nbsp;|&nbsp;</li>
+   	  <li><a href="../index.html">墨涵首页</a>&nbsp;|&nbsp;</li>
+    </ul>
+  </div>
+</div>
+<div id="step">
+	<div id="step_left"><a href="index.html"><img src="../images/logo.png" alt="墨涵书城"></a></div>
+    <div id="step_right"><img src="../images/step2.png"></div>
+</div>
+<!--订单开始-->
+<div id="orderinfo">
+<!--订单摘要-->
+<table width="980" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td height="60" align="center" valign="bottom" bgcolor="#E4F8C3">&nbsp;&nbsp;&nbsp;您共购买了&nbsp;<span class="font25pxblueStrong">3</span>&nbsp;本图书，总价格&nbsp;<span class="font25pxblueStrong">108.00</span>&nbsp;元&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0)" class="font12pxblue">刷新</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:onclick=showOrderDetail()">订单详情</a></td>
+    </tr>
+    <tr>
+      <td height="30" bgcolor="#E4F8C3">&nbsp;</td>
+    </tr>
+    <tr>
+      <td height="3" bgcolor="#87A74D">
+      </td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+  </table>
+<!--订单详情-->
+<table width="980" border="0" cellspacing="1" cellpadding="0" style="display:none;background-color:#DFEFFF;" id="orderdetail">
+  <tr>
+    <td height="30" align="center" bgcolor="#DFEFFF">序号</td>
+    <td align="center" bgcolor="#DFEFFF"> &nbsp;图书名称</td>
+    <td align="center" bgcolor="#DFEFFF">单价</td>
+    <td align="center" bgcolor="#DFEFFF">数量</td>
+    <td align="center" bgcolor="#DFEFFF">优惠</td>
+    <td align="center" bgcolor="#DFEFFF">小计</td>
+  </tr>
+  <tr>
+    <td width="70" height="30" align="center" bgcolor="#F9FCFF">1</td>
+    <td align="left" bgcolor="#F9FCFF" class="font12pxblue">&nbsp;java编程思想原书第7版</td>
+    <td width="101" align="center" bgcolor="#F9FCFF">&yen;36.00</td>
+    <td width="101" align="center" bgcolor="#F9FCFF">1</td>
+    <td width="101" align="center" bgcolor="#F9FCFF">无优惠</td>
+    <td width="101" align="center" bgcolor="#F9FCFF" class="font14pxredStrong">&yen;36.00</td>
+    </tr>
+  <tr>
+    <td width="70" height="30" align="center" bgcolor="#F9FCFF">2</td>
+    <td align="left" bgcolor="#F9FCFF" class="font12pxblue">&nbsp;java编程思想原书第7版</td>
+    <td width="101" align="center" bgcolor="#F9FCFF">&yen;36.00</td>
+    <td width="101" align="center" bgcolor="#F9FCFF">1</td>
+    <td width="101" align="center" bgcolor="#F9FCFF">无优惠</td>
+    <td width="101" align="center" bgcolor="#F9FCFF" class="font14pxredStrong">&yen;36.00</td>
+  </tr>
+  <tr>
+    <td width="70" height="30" align="center" bgcolor="#F9FCFF">3</td>
+    <td align="left" bgcolor="#F9FCFF" class="font12pxblue">&nbsp;java编程思想原书第7版</td>
+    <td width="101" align="center" bgcolor="#F9FCFF">&yen;36.00</td>
+    <td width="101" align="center" bgcolor="#F9FCFF">1</td>
+    <td width="101" align="center" bgcolor="#F9FCFF">无优惠</td>
+    <td width="101" align="center" bgcolor="#F9FCFF" class="font14pxredStrong">&yen;36.00</td>
+  </tr>
+  <tr>
+    <td height="30" colspan="6" align="right" bgcolor="#F9FCFF"><a href="javascript:onclick=closeOrderDetail()">关闭</a>&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+</table>
+</div>
+<!--订单结束-->
+
+<!--确认付款开始-->
+<form action="pay.html" method="post">
+<div id="bank">
+  <table width="980" border="0" cellspacing="0" cellpadding="0" style="border:5px solid #87A74D;">
+    <tr>
+      <td><table width="940" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="80" align="center" valign="middle">付款方式：</td>
+          <td width="170" height="80" align="left" valign="middle"><img src="../bank/cmbchina.jpg" width="158" height="32" /></td>
+          <td width="50" align="center" valign="middle">支付：</td>
+          <td align="left" valign="middle"><span class="font14pxredStrong">&yen;108.00</span>元</td>
+        </tr>
+        <tr>
+          <td align="center" valign="middle">&nbsp;</td>
+          <td height="200" align="left" valign="top"><input type="image" name="imageField" id="imageField" src="../images/button_confirm_pay.png" />
+            <br />
+            <br />
+            <a href="selectbank.html" class="font12pxblue">选择其他银行付款</a></td>
+          <td align="center" valign="middle">&nbsp;</td>
+          <td align="left" valign="middle">&nbsp;</td>
+        </tr>
+        </table></td>
+    </tr>
+    </table>
+</div>
+</form>
+<!--确认付款结束-->
+
+<div id="footer1">
+<table width="800" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="40" align="center">Copyright (C) 墨涵网 2008-2013, All Rights Reserved|甘ICP证080089号</td>
+  </tr>
+  <tr>
+    <td height="60" align="center"><img src="../images/validate.gif" width="128" height="47" alt="网址备案" /></td>
+  </tr>
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+package com.mohan.lzcc.servlet;
+
+import java.io.IOException;
+import java.sql.SQLException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import com.mohan.lzcc.model.LoginInfo;
+import com.mohan.lzcc.service.UserIService;
+import com.mohan.lzcc.service.impl.UserServiceImpl;
+
+/**
+ * Servlet implementation class LoginServlet
+ */
+@WebServlet(description = "登陆控制器", urlPatterns = { "/login.action" })
+public class LoginServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public LoginServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		this.doPost(request, response);
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		try {
+			//获取页面用户输入的数据
+			String username = request.getParameter("username");
+			String password = request.getParameter("password");
+			String verifycode = request.getParameter("verifyCode");
+			
+			//获取系统保存的验证码
+			HttpSession session = request.getSession();
+			String sysVerifyCode = (String)session.getAttribute("randomString");
+			/*
+			 * 数据验证
+			 */
+//			//验证码验证
+//			if(!verifycode.equalsIgnoreCase(sysVerifyCode)){
+//				request.setAttribute("errorinfo", "验证码输入不正确...");
+//				request.getRequestDispatcher("login.jsp").forward(request, response);
+//				return;
+//			}
+			
+			LoginInfo li = new LoginInfo(username,password);
+			UserIService us = new UserServiceImpl();
+			int logininfoid = us.login(li);
+			
+			if(logininfoid != 0){
+				System.out.println("登陆成功");
+				//response.sendRedirect("WEB-INF/jsp/index.jsp");
+				request.getRequestDispatcher("WEB-INF/jsp/index.jsp").forward(request, response);
+				//request.getRequestDispatcher("WEB-INF/jsp/index.jsp").forward(request, response);
+
+			}else{
+				System.out.println("登陆失败");
+				request.setAttribute("erroeinfo", "登陆失败");
+				request.getRequestDispatcher("login.jsp").forward(request, response);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+}

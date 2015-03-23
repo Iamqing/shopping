@@ -1,0 +1,6 @@
+@charset "utf-8";
+/*导航 */
+#nav{ width:980px; height:41px; background:url(menu.jpg) repeat-x;}
+#nav li{ float:left; width:87px; height:41px; line-height:41px; text-align:center; }
+#nav li a{ display:block;color:#fff; font-size:14px;font-weight:bold;}
+#nav li a:hover{ background:url(menu_hover.jpg) no-repeat; }

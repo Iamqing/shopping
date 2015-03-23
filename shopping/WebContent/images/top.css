@@ -1,0 +1,8 @@
+@charset "utf-8";
+/* 顶部导航 */
+#top_nav{ background:url(top_bg.png) repeat-x; height:25px;}
+#top_nav_left{ float:left; width:500px; height:25px;}
+#top_nav_left li{ float:left; height:25px; line-height:25px; margin-left:5px;}
+#top_nav_right{ float:right; width:400px; height:25px;}
+#top_nav_right li{ float:right; height:25px; line-height:25px; margin-right:5px;}
+#top_logo{ width:980px; height:80px; padding-top:10px;}

@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url("style.css");
+@import url("top.css");
+@import url("header.css");
+@import url("footer.css");
+@import url("nav.css");
+#main{ width:980px;}
+#main_left{ width:190px; float:left;}
+#main_right{ width:760px;  float:right;}
+#main_right_sort{ width:758px; height:37px; border:1px solid #D7D7D7; border-bottom:2px solid #FE7C2C;}
+#main_right_sort_left{ width:228px; height:37px; float:left;}
+#main_right_sort_left li{ width:76px; height:37px; float:left; background:url(bg2.png) no-repeat 0px -37px; text-align:center; line-height:37px;}
+#main_right_sort_left li a{ display:block;}
+#main_right_sort_left li a:hover{ display:block; background:url(bg2.png) no-repeat 0px -111px; color:#FFF;}
+#main_right_sort_right{ width:400px; height:37px; line-height:37px; float:right;}
+#main_right_sort_right li{ float:right; height:37px; line-height:37px; padding:0px 3px;;}
+.book_img{ border:1px solid #E5E5E5;}
+.page{ display:block; width:57px; height:24px; text-align:center; background:url(bg2.png) no-repeat; line-height:24px;}
+.page1{ background-position:0px -253px;}
+.page2{ background-position:0px -277px; color:#FFF;}
+.go{width:38px; height:20px; border:none; background:url(bg2.png) no-repeat;}
+.goout{ background-position:0px -321px;}
+.goover{ background-position:0px -341px;}
+.input_page{ width:38px; height:20px; background:url(images/bg2.png) no-repeat 0px -301px; border:none; line-height:20px;}

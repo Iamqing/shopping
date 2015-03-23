@@ -1,0 +1,9 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url("style.css");
+@import url("top.css");
+@import url("step.css");
+@import url("footer.css");
+#orderinfo{ width:980px;}
+#bank{ width:980px; margin-top:20px; margin-bottom:20px;}

@@ -1,0 +1,12 @@
+@charset "utf-8";
+/* 显示送货地址 */
+@import url("style.css");
+@import url("top.css");
+@import url("footer.css");
+@import url("step.css");
+
+
+#main{ width:980px; margin:0 auto;}
+.bgcolour{background-color:#FFE275;}
+.input_number_text{width:30px; height:20px; line-height:20px; text-align:right;}
+.success_bg{ background:url(success.png) no-repeat; width:980px; height:219px;}
